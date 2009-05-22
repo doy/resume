@@ -1,0 +1,123 @@
+% vim:foldmethod=marker commentstring=%%%s
+% license {{{
+% This work is licensed under the Creative Commons
+% Attribution-NonCommercial-ShareAlike License. To view a copy of this license,
+% visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to
+% Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+% This file is adapted from Todd Courtesan's resume, at
+% http://www.courtesan.com/todd/resume.html
+% }}}
+% {{{ header
+\documentclass[letterpaper,10pt]{article}
+\usepackage{jesse_resume}
+% }}}
+\begin{document}
+% {{{ heading (contact info, etc)
+% look up what this actually does...
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}cr}
+jluehrs2@uiuc.edu & \textbf{\LARGE Jesse P Luehrs} & 506 E. White St., Apt \#22\\
+(618) 616-6287 & & Champaign, IL 61820\\
+\end{tabular*}
+\\
+% }}}
+\vspace{0.1in}
+% {{{ Education
+\resheading{Education}
+\begin{itemize}
+\item \ressubheading{University of Illinois at Urbana-Champaign}
+                    {Urbana, IL}
+                    {Bachelor of Science in Computer Science (in progress)}
+                    {Aug. 2004--May 2008 (expected)}
+    \begin{itemize}
+    \resitem{Overall GPA: 3.66, Technical GPA: 3.86}
+    \resitem{James Scholar in Engineering (2004--2005)}
+    \resitem{Dean's List (Fall 2004--Fall 2006)}
+    \end{itemize}
+\end{itemize}
+% }}}
+% {{{ Work Experience
+\resheading{Work Experience}
+\begin{itemize}
+\item \ressubheading{UIUC Hydrogeology Lab}
+                    {Urbana, IL}
+                    {Programmer}
+                    {Feb. 2006--present}
+    \begin{itemize}
+    \resitem{Worked on the Geochemists' Workbench, a geochemistry software suite written in C++ and Tcl/Tk.}
+    \resitem{Added or enhanced support for several different image output formats including PDF, SVG, and PostScript, including adding TrueType font embedding to PDF and PostScript files.}
+    \end{itemize}
+\item \ressubheading{Smile-A-While Amusements}
+                    {Traveling, Illinois/Indiana/Missouri}
+                    {Concessions manager}
+                    {summer 2004 and 2005}
+    \begin{itemize}
+    \resitem{Managed several amusement games on the Luehrs' Ideal Rides carnival.}
+    \end{itemize}
+\end{itemize}
+% }}}
+% {{{ Projects
+\resheading{Projects}
+\begin{itemize}
+%%\item \resshortsubheading{hm-command (http://tozt.net/code/hm-command/)}{2008--Present}
+    %%\begin{itemize}
+    %%\resitem{hm-command is a script for interacting with Hiveminder (http://hiveminder.com).}
+    %%\resitem{It is written in Perl, and uses the Net::Hiveminder module to interact with Jifty's REST interface.}
+    %%\end{itemize}
+\item \resshortsubheading{System for Defining, Documenting and Recording Game Events}{2007--Present}
+    \begin{itemize}
+    \resitem{This is a library written in C which can be added to games in order to track arbitrary events and report them to a remote server, for use in gameplay testing.}
+    \resitem{This is being written as a group project for Volition, Inc., to fulfill the senior project requirement for graduation from UIUC.}
+    \end{itemize}
+\item \resshortsubheading{LuaSignal (http://tozt.net/code/luasignal/)}{2007--Present}
+    \begin{itemize}
+    \resitem{This is a library for Lua written mostly in C, which provides POSIX signal handling support to Lua scripts.}
+    \end{itemize}
+\item \resshortsubheading{LuaIRC (http://tozt.net/code/luairc/)}{2006--Present}
+    \begin{itemize}
+    \resitem{LuaIRC is a fully-featured IRC framework written in Lua.}
+    \end{itemize}
+%%\item \resshortsubheading{Illinexus (http://www.illinexus.org/)}{2006--Present}
+    %%\begin{itemize}
+    %%\resitem{I am the system administrator for Illinexus, which provides a free web hosting service for UIUC students and registered student organizations.}
+    %%\end{itemize}
+\item \resshortsubheading{Interhack (http://interhack.us/)}{2007}
+    \begin{itemize}
+    \resitem{Interhack is a program written in object-oriented Perl, using the Calf object system (a stripped down version of Moose). It provides user interface enhancements for the game NetHack.}
+    \resitem{For Interhack I also developed the Perl module IO::Pty::Easy, which allows for spawning subprocesses on a pseudo-terminal, and provides access to stdin/stdout of that subprocess through a simple read/write interface.}
+    \end{itemize}
+\item \resshortsubheading{Sonnet (http://tozt.net/code/sonnet/)}{2006}
+    \begin{itemize}
+    \resitem{Sonnet is an implementation of a Forth variant in Lua.}
+    \end{itemize}
+\item \resshortsubheading{LSLua}{2005--2006}
+    \begin{itemize}
+    \resitem{LSLua is a module for the alternative Windows shell LiteStep, which provides Lua scripting capabilities to theme authors. It is written in C++, using the Lua C API.}
+    \end{itemize}
+%%\item \resshortsubheading{Ars Physica (https://www-s.acm.uiuc.edu/wiki/space/Ars+Physica)}{2004--2005}
+    %%\begin{itemize}
+    %%\resitem{Ars Physica is a 3d puzzle game written in C++. I added Lua bindings to it, and used them to extend certain aspects of the game.}
+    %%\end{itemize}
+\end{itemize}
+% }}}
+% {{{ Skills
+\resheading{Skills}
+\begin{description}
+\item[Languages:]
+\begin{minipage}[t]{6.5in}
+\begin{description}
+\item Proficient in C, C++, Lua, Bash, Perl (CPAN id: DOY), LaTeX
+\item Working knowledge of Ruby, OCaml, Tcl/Tk, JavaScript, HTML/CSS, PostScript, sed
+\end{description}
+\end{minipage}
+\item[Operating Systems:] Linux (Gentoo, Debian), Windows (2000, XP)
+\item[Tools:] Make, Vim, Microsoft Visual Studio, Cygwin, Darcs, Subversion
+\end{description}
+% }}}
+% {{{ Activities
+\resheading{Activities}
+\begin{description}
+\item[Inline Insomniacs:] I have been the webmaster for the Inline Insomniacs rollerblading club from 2005 until present.
+\item[Falling Illini:] I have been a member of the Falling Illini skydiving club since 2007.
+\end{description}
+% }}}
+\end{document}
