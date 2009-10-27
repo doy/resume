@@ -57,9 +57,9 @@ Moose (http://moose.perl.org/): 2009 - Present
 
 Bot::Games (http://github.com/doy/bot-games): 2009 - Present
 - Bot::Games is an IRC bot framework written in Perl, designed for
-  multiplayer game moderation.}
+  multiplayer game moderation.
 - Uses Moose extensively to provide a clean and extensible plugin system
-  for adding games.}
+  for adding games.
 
 TAEB (http://taeb.sartak.org/): 2008 - Present
 - TAEB is a Perl framework (using Moose) for programmatic interaction
