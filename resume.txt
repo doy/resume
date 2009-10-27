@@ -1,0 +1,110 @@
+Jesse P Luehrs
+==============
+Address: 702 W. Green St., Apt #2
+         Urbana, IL 61801
+Phone:   (618) 616-6287
+Email:   doy@tozt.net
+Website: http://tozt.net/
+
+=========
+Education
+=========
+University of Illinois at Urbana-Champaign, College of Engineering
+Urbana, IL
+Bachelor of Science in Computer Science
+Aug. 2004 - May 2008
+- Overall GPA: 3.61, Technical GPA: 3.81
+- James Scholar in Engineering (2004 - 2005)
+- Dean's List (Fall 2004 - Fall 2006)
+- Graduated with Honors
+
+===============
+Work Experience
+===============
+UIUC Hydrogeology Lab
+Urbana, IL
+Visiting Research Programmer
+February 2006 - present
+- Worked on the Geochemists' Workbench, a geochemistry software suite
+  written in C++ and Tcl/Tk.
+- Added or enhanced support for several different image output formats
+  including PDF, SVG, and PostScript, including adding TrueType font
+  embedding to PDF and PostScript files.
+- Helped add parallel processing support to several scientific
+  calculations, using OpenMP.
+- Designed a new XML-based configuration file format for our
+  applications.
+- Ported our calculation apps to Linux, to allow them to be run on large
+  clusters.
+- Implemented a unit testing framework for our calculation apps in Perl,
+  using Test::More.
+
+Smile-A-While Amusements
+Traveling, Illinois/Indiana/Missouri
+Concessions manager
+Summer 2004 and 2005
+- Managed several amusement games on the Luehrs' Ideal Rides carnival.
+
+========
+Projects
+========
+Moose (http://moose.perl.org/): 2009 - Present
+- Member of the Moose Cabal, the lead development team for Moose.
+- Wrote several extensions for Moose, including MooseX::NonMoose, which
+  allows classes built with Moose to easily interoperate with other
+  types of classes, and MooseX::Aliases, which allows Moose attributes
+  to be referred to by different names.
+
+Bot::Games (http://github.com/doy/bot-games): 2009 - Present
+- Bot::Games is an IRC bot framework written in Perl, designed for
+  multiplayer game moderation.}
+- Uses Moose extensively to provide a clean and extensible plugin system
+  for adding games.}
+
+TAEB (http://taeb.sartak.org/): 2008 - Present
+- TAEB is a Perl framework (using Moose) for programmatic interaction
+  with NetHack (http://nethack.org/).
+- Primary developer for the leading AI written for TAEB.
+- Developed several standalone Perl modules in the course of
+  development, including Graph::Implicit, which implements several
+  useful graph algorithms, and IO::Pty::Easy, which provides a simple
+  read/write interface for interacting with pseudo-terminals.
+
+Smithy (http://sourceforge.net/projects/smithy/): 2008
+- Smithy is a crossplatform map editor for the Aleph One engine
+  (http://marathon.sourceforge.net/), written in OCaml.
+- Contributed several GUI improvements, including writing custom widgets
+  using LablGTK.
+
+System for Defining, Documenting and Recording Game Events
+  (http://volition-inc.com/): 2007 - 2008
+- This is a library written in C which can be added to games in order to
+  track arbitrary events and report them to a remote server, for use in
+  gameplay testing.
+
+LuaIRC (http://luaforge.net/projects/luairc/): 2006 - 2008
+- LuaIRC is a fully-featured IRC framework written in Lua.
+- Supports all standard IRC functionality, including CTCP and DCC.
+
+======
+Skills
+======
+Languages:
+- Proficient in C, C++, Perl (CPAN id: DOY), Lua, Bash, OCaml
+- Working knowledge of Ruby, Tcl/Tk, JavaScript, LaTeX, HTML/CSS,
+  PostScript, sed
+Operating Systems:
+- Linux (Arch, Debian, Gentoo)
+- Windows (2000, XP)
+Tools:
+- Make, Vim, Microsoft Visual Studio, Cygwin, Darcs, Subversion, Git
+
+==========
+Activities
+==========
+Inline Insomniacs:
+- I was the webmaster for the Inline Insomniacs rollerblading club from
+  2005 until 2007.
+Falling Illini:
+- I was a member of the Falling Illini skydiving club from 2007 until
+  2008.
