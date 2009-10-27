@@ -34,10 +34,10 @@ February 2006 - present
   calculations, using OpenMP.
 - Designed a new XML-based configuration file format for our
   applications.
-- Ported our calculation apps to Linux, to allow them to be run on large
-  clusters.
-- Implemented a unit testing framework for our calculation apps in Perl,
-  using Test::More.
+- Ported our calculation applications to Linux, to allow them to be run
+  on large clusters.
+- Implemented a unit testing framework for our calculation applications
+  in Perl, using Test::More.
 
 Smile-A-While Amusements
 Traveling, Illinois/Indiana/Missouri
@@ -71,7 +71,7 @@ TAEB (http://taeb.sartak.org/): 2008 - Present
   read/write interface for interacting with pseudo-terminals.
 
 Smithy (http://sourceforge.net/projects/smithy/): 2008
-- Smithy is a crossplatform map editor for the Aleph One engine
+- Smithy is a cross-platform map editor for the Aleph One engine
   (http://marathon.sourceforge.net/), written in OCaml.
 - Contributed several GUI improvements, including writing custom widgets
   using LablGTK.
