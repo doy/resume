@@ -11,26 +11,160 @@
 \documentclass[letterpaper]{article}
 \usepackage{jesse_resume}
 \hypersetup{hidelinks}
-\setlength{\oddsidemargin}{-0.75in}
-\setlength{\evensidemargin}{-0.75in}
-\setlength{\textwidth}{8in}
-\setlength{\topmargin}{-0.75in}
-\setlength{\textheight}{10.5in}
 % }}}
 \begin{document}
 % Header {{{
 \resheader{Jesse Luehrs}
-          {http://tozt.net/}
+          {https://tozt.net/}
           {doy@tozt.net\hspace{0.5in}}
           {(618) 616-6287}
-          {70 America St. \#1R}
-          {Providence, RI 02903}
+          {142 E 16th St. \#19D}
+          {New York, NY, 10003}
+% }}}
+% Work Experience {{{
+\resheading{Work Experience}
+\begin{itemize}
+    % Stripe {{{
+    \item \ressubheading{Stripe (\url{https://stripe.com/})}{Remote}
+                        {Staff Engineer}{January 2015--June 2021}
+        \begin{itemize}
+            \item Moved our CI infrastructure from a proprietary system to
+                Jenkins. This included rewriting the testing infrastructure of
+                our main monolith to run tests in parallel with process
+                isolation to allow for better reproducibility and the ability
+                to scale out automatically to many worker machines. This was
+                able to reduce turnaround time for tests by over 80\%, and
+                provided a path to scaling out to more machines to keep test
+                times down.
+            \item Converted all of our internal infrastructure to use an
+                installation of Confidant
+                (\url{https://lyft.github.io/confidant/}) for secrets storage
+                and distribution, giving us much more control over which people
+                and machines had access to our secrets.
+            \item Implemented an authentication service which allowed users to
+                sign arbitrary data as their own identity in a way that
+                machines could independently verify. This allowed us to remove
+                almost all use of GPG at Stripe, which eliminated a large class
+                of tooling issues related to deployments.
+            \item Contributed to importing all of our low level infrastructure
+                which had originally been set up via custom tooling (or by
+                hand) into Terraform, allowing us to (mostly) automate creation
+                of new AWS accounts.
+            \item Contributed to our rollout of Envoy for service-to-service
+                communication, giving us automatic, transparent mutual TLS for
+                almost all internal traffic. Additionally, used features
+                provided by Envoy to implement a blue/green deploy mechanism
+                which greatly improved speed and reliability of deploys for our
+                critical services.
+            \item Implemented a fleetwide service in go for running maintenance
+                commands on servers (running puppet, restarting services, etc),
+                which reduced the time needed for running these types of
+                commands from several days in some cases to under 5 minutes.
+                Additionally, designed a secure protocol for these types of
+                actions which ensured that the end services would not perform
+                any actions without first ensuring that the request was logged
+                in a separate secure append-only logging system.
+        \end{itemize}
+    % }}}
+    % Infinity Interactive {{{
+    \item \ressubheading{Infinity Interactive (\url{https://iinteractive.com/})}{Remote}
+                        {Senior Programmer}{February 2010--August 2014}
+        \begin{itemize}
+            \item Maintained a large, legacy codebase which handled employee
+                engagement survey registration and reporting for several large
+                companies.
+            \item Wrote and deployed many small websites for clients, using
+                Perl and Javascript.
+            \item Developed and maintained various open source projects used in
+                our client work, including Moose and Plack (see below).
+        \end{itemize}
+    % }}}
+    % UIUC Hydrogeology Lab {{{
+    \item \ressubheading{UIUC Hydrogeology Lab (\url{https://www.gwb.com/})}{Urbana, IL}
+                        {Visiting Research Programmer}{February 2006--February 2010}
+        \begin{itemize}
+            \item Worked on the Geochemists' Workbench, a geochemistry software
+                suite written in C++ and Tcl/Tk.
+            \item Added support for several new image output formats including
+                SVG and PDF, and added features to existing ones, including
+                adding font embedding support to our PostScript output.
+            \item Contributed to adding parallel processing support to several
+                scientific calculations, using OpenMP.
+            \item Ported our calculation applications from Windows to Linux, to
+                allow them to be run on large supercomputing clusters.
+            \item Implemented a testing framework for our calculation
+                applications, using Perl's Test::More.
+        \end{itemize}
+    % }}}
+\end{itemize}
+% }}}
+% Open Source {{{
+\resheading{Open Source}
+
+\small{A more complete list of my projects can be found on my website
+(\url{https://tozt.net/projects.html} and \url{https://git.tozt.net/}). All of
+my personal open source work is also available on GitHub
+(\url{https://github.com/doy}), and you can also find my Rust open source work
+on crates.io (\url{https://crates.io/users/doy}) and my Perl open source work
+on MetaCPAN (\url{https://metacpan.org/author/DOY}).}\normalsize
+
+\begin{itemize}
+    % nbsh {{{
+    \item \resshortsubheading{nbsh (\url{https://github.com/doy/nbsh})}{2021--present} \linebreak \linebreak
+        I am currently developing an advanced new shell using Rust and Tokio
+        which integrates aspects of terminal multiplexers to provide a user
+        experience more similar to notebooks (such as Jupyter) than traditional
+        shells.
+    % }}}
+    % rbw {{{
+    \item \resshortsubheading{rbw (\url{https://github.com/doy/rbw})}{2020--present} \linebreak \linebreak
+        I wrote and maintain rbw, an unofficial command-line client for the
+        Bitwarden password manager. rbw is written in Rust, and uses a
+        background agent (in a similar style to ssh-agent or gpg-agent) to keep
+        credentials persistently in memory.
+    % }}}
+    % Reply {{{
+    \item \resshortsubheading{Reply (\url{https://github.com/doy/reply})}{2013--2016} \linebreak \linebreak
+        I wrote Reply, a lightweight and extensible REPL for Perl. It includes
+        many useful features such as tab completion and history support.
+    % }}}
+    % Dungeon Crawl Stone Soup {{{
+    \item \resshortsubheading{Dungeon Crawl Stone Soup (\url{https://crawl.develz.org/})}{2009--2016} \linebreak \linebreak
+        I was a member of the development team for Dungeon Crawl Stone Soup, a
+        roguelike game written in C++ and Lua. I contributed several features
+        to the game and was also the release manager for the 0.6 release.
+    % }}}
+    % Plack {{{
+    \item \resshortsubheading{Plack (\url{https://plackperl.org/})}{2012--2013} \linebreak \linebreak
+        I was a member of the core development team for PSGI and Plack, the
+        specification for Perl web server/application interaction (similar to
+        Python's WSGI and Ruby's Rack).
+    % }}}
+    % Perl {{{
+    \item \resshortsubheading{Perl (\url{https://www.perl.org/})}{2011--2013} \linebreak \linebreak
+        I was the release manager for the 5.17.1 development release of Perl,
+        and I have also contributed many bug fixes. I was also a lead developer
+        on the p5-mop project, a prototype of a new object system for Perl.
+    % }}}
+    % Moose {{{
+    \item \resshortsubheading{Moose (\url{https://metacpan.org/dist/Moose})}{2009--2013} \linebreak \linebreak
+        I was a member of the development team for Moose, which provides
+        advanced object orientation capabilities to Perl. I was also the
+        release manager from 2011--2012.
+    % }}}
+    % TAEB {{{
+    \item \resshortsubheading{TAEB (\url{https://taeb.github.io/})}{2008--2011} \linebreak \linebreak
+        I was one of the lead framework developers for TAEB, a Perl framework
+        for programmatic interaction with the game NetHack. I was also the
+        primary developer for the leading bot written with TAEB framework.
+    % }}}
+\end{itemize}
 % }}}
 % Education {{{
 \resheading{Education}
 \begin{itemize}
-    % Hacker School {{{
-    \item \ressubheading{Hacker School}{New York, NY}
+    % Recurse Center {{{
+    \item \ressubheading{Recurse Center (\url{https://recurse.com/})}{New York, NY}
                         {Student}{September 2014--November 2014}
     % }}}
     % UIUC {{{
@@ -51,148 +185,34 @@
     % }}}
 \end{itemize}
 % }}}
-% Work Experience {{{
-\resheading{Work Experience}
-\begin{itemize}
-    % Infinity Interactive {{{
-    \item \ressubheading{Infinity Interactive (\url{http://iinteractive.com/})}{Manhasset, NY (telecommuting)}
-                        {Senior Programmer}{February 2010--August 2014} \vspace{6pt} \linebreak
-        \small{I was in charge of a large, legacy codebase which handles employee
-        engagement survey registration and reporting, and I have also written
-        and deployed many smaller sites myself, mostly using Perl. Since we
-        relied heavily on open source software, a large portion of my time was
-        also devoted to maintaining various open source projects, as well as
-        developing new open source software that could be useful in the
-        future.}\normalsize
-    % }}}
-    % UIUC Hydrogeology Lab {{{
-    \item \ressubheading{UIUC Hydrogeology Lab (\url{http://www.gwb.com/})}{Urbana, IL}
-                        {Visiting Research Programmer}{February 2006--February 2010} \vspace{6pt} \linebreak
-        \small{I worked on the Geochemists' Workbench, a geochemistry software suite
-        written in C++ and Tcl/Tk. I added support for several new image output
-        formats as well as adding font embedding support to the existing
-        PostScript format. I also helped add parallel processing support to
-        several scientific calculations, using OpenMP. I ported our calculation
-        applications from Windows to Linux, to allow them to be run on large
-        clusters. Finally, I implemented a testing framework for our calculation
-        applications using Perl's Test::More.}\normalsize
-    % }}}
-\end{itemize}
-% }}}
-% Projects {{{
-\resheading{Projects}
-
-\small{A more complete list of my projects is on my website
-(\url{https://tozt.net/projects.html}). All of my personal open source work is
-also available on GitHub (\url{https://github.com/doy}), and my Perl open
-source work is also available on the CPAN
-(\url{https://metacpan.org/author/DOY}).}\normalsize\vspace{-3pt}
-
-\begin{itemize}
-    % termcast {{{
-    \item \resshortsubheading{Termcast (\url{https://github.com/doy/python-termcast-server})}{2014--present} \vspace{6pt} \linebreak
-        \small{I wrote a server and client to allow users to stream their terminal
-        sessions over the network for other people to watch.}\normalsize
-    % }}}
-    % libvt100 {{{
-    % \item \resshortsubheading{libvt100 (\url{https://github.com/doy/libvt100})}{2014--present} \vspace{6pt} \linebreak
-    %     I am the author of libvt100, a terminal parsing library written in C
-    %     and Lex. I am currently using it in the Termcast server and in Runes, a
-    %     terminal emulator.
-    % }}}
-    % Text::Handlebars {{{
-    % \item \resshortsubheading{Text::Handlebars (\url{https://github.com/doy/text-handlebars})}{2013--present} \vspace{6pt} \linebreak
-    %     I am the author of Text::Handlebars, a port of the Handlebars.js
-    %     templating language to Perl. It uses a custom parser on top of the
-    %     Xslate template engine framework. It supports nearly the entire feature
-    %     set of the JavaScript implementation, and we used it at Infinity
-    %     Interactive to ease the transition of one of our large web applications
-    %     from client side templates to server side templates.
-    % }}}
-    % Reply {{{
-    % \item \resshortsubheading{Reply (\url{https://github.com/doy/reply})}{2013--present} \vspace{6pt} \linebreak
-    %     \small{I wrote Reply, a lightweight and extensible REPL for Perl. It includes
-    %     many useful features such as tab completion and history support.}\normalsize
-    % }}}
-    % Dungeon Crawl Stone Soup {{{
-    \item \resshortsubheading{Dungeon Crawl Stone Soup (\url{http://crawl.develz.org/})}{2009--present} \vspace{6pt} \linebreak
-        \small{I am a member of the development team for Dungeon Crawl Stone Soup, a
-        roguelike game written in C++ and Lua. I contributed several features
-        to the game and was also the release manager for the 0.6 release.}\normalsize
-    % }}}
-    % Plack {{{
-    % \item \resshortsubheading{Plack (\url{http://plackperl.org/})}{2012--2013} \vspace{6pt} \linebreak
-    %     I am a member of the core development team for PSGI and Plack, the
-    %     specification for Perl web server/application interaction (similar to
-    %     Python's WSGI and Ruby's Rack).
-    % }}}
-    % Perl {{{
-    \item \resshortsubheading{Perl (\url{http://www.perl.org/})}{2011--2013} \vspace{6pt} \linebreak
-        \small{I was the release manager for the 5.17.1 development release of Perl,
-        and I have also contributed many bug fixes. I have also been a lead
-        developer on the p5-mop project, a prototype of a new object system for
-        Perl.}\normalsize
-    % }}}
-    % OX {{{
-    % \item \resshortsubheading{OX (\url{https://github.com/iinteractive/OX})}{2011--present} \vspace{6pt} \linebreak
-    %     I am the lead author of OX, a web framework for Perl based on the PSGI
-    %     specification, which uses the Bread::Board dependency injection system
-    %     to manage application components. We have used it internally at
-    %     Infinity Interactive for many client projects. In addition to writing
-    %     most of the framework itself, I also wrote a series of advent calendar
-    %     posts documenting it, which can be seen at
-    %     \url{http://ox.iinteractive.com/advent/}.
-    % }}}
-    % Moose {{{
-    \item \resshortsubheading{Moose (\url{http://moose.perl.org/})}{2009--2013} \vspace{6pt} \linebreak
-        \small{I am a member of the development team for Moose, which provides
-        advanced object orientation capabilities to Perl. I was also the
-        release manager from 2011--2012.}\normalsize
-    % }}}
-    % TAEB {{{
-    \item \resshortsubheading{TAEB (\url{http://taeb.github.io/})}{2008--2011} \vspace{6pt} \linebreak
-        \small{I was one of the lead framework developers for TAEB, a Perl framework
-        for programmatic interaction with NetHack. I was also the primary
-        developer for the leading AI written for TAEB.}\normalsize
-    % }}}
-    % Volition {{{
-    % \item \resshortsubheading{System for Defining, Documenting and Recording Game Events (\url{http://volition-inc.com/})}{2007--2008} \vspace{6pt} \linebreak
-    %     This is a library written in C which can be added to games in order to
-    %     track arbitrary events and report them to a remote server, for use in
-    %     gameplay testing. This project was completed for Volition as my senior
-    %     project, and was used as part of their testing process for Saints Row
-    %     2.
-    % }}}
-\end{itemize}
-% }}}
 % Talks {{{
 \resheading{Talks}
 
 \small{Slides and videos (where available) for these talks can be found at
-\url{http://tozt.net/talks.html}.}\normalsize\vspace{-3pt}
+\url{http://tozt.net/talks.html}.}\normalsize
 
 \begin{itemize}
-    \item \resshortsubheading{Introduction to Rust (50 min)}{YAPC::NA 2014} \vspace{6pt}\linebreak
-        \small{This talk describes the Rust programming language, touching on
+    \item \resshortsubheading{Introduction to Rust (50 min)}{YAPC::NA 2014} \linebreak \linebreak
+        This talk describes the Rust programming language, touching on
         its major features and design philosophies that make it
-        interesting.}\normalsize
-    \item \resshortsubheading{Dependency Injection with Bread::Board (50 min)}{YAPC::NA 2012, YAPC::EU 2012} \vspace{6pt}\linebreak
-        \small{This talk provides an overview of dependency injection, and
-        gives concrete examples of it using the Bread::Board module for Perl.}\normalsize
-    \item \resshortsubheading{OX - the hardest working two letters in Perl (50 min)}{YAPC::NA 2011} \vspace{6pt}\linebreak
-        \small{This talk describes the OX web framework for Perl, including a
-        conceptual overview and usage examples.}\normalsize
-    \item \resshortsubheading{Extending Moose (50 min)}{YAPC::NA 2010} \vspace{6pt}\linebreak
-        \small{This talk goes into detail describing Moose's meta object
+        interesting.
+    \item \resshortsubheading{Dependency Injection with Bread::Board (50 min)}{YAPC::NA 2012, YAPC::EU 2012} \linebreak \linebreak
+        This talk provides an overview of dependency injection, and
+        gives concrete examples of it using the Bread::Board module for Perl.
+    \item \resshortsubheading{OX - the hardest working two letters in Perl (50 min)}{YAPC::NA 2011} \linebreak \linebreak
+        This talk describes the OX web framework for Perl, including a
+        conceptual overview and usage examples.
+    \item \resshortsubheading{Extending Moose (50 min)}{YAPC::NA 2010} \linebreak \linebreak
+        This talk goes into detail describing Moose's meta object
         protocol, including what it is, how it works, and how you can extend
-        it.}\normalsize
+        it.
 \end{itemize}
 % }}}
 % Skills {{{
 \resheading{Skills}
 \begin{description}
-    \item[Languages:] \small{I am fluent in C, C++, Perl, Lua, and shell, and I am also proficient in Python, JavaScript, HTML/CSS, Scala, Rust, and LaTeX.}\normalsize\vspace{-6pt}
-    \item[Tools:] \small{Make, vim, git, Firefox}\normalsize
+    \item[Languages:] I am fluent in Rust, Ruby, Go, C, Perl, Lua, and shell.
+    \item[Tools:] git, vim, make, Jenkins, Terraform, Puppet, Docker
 \end{description}
 % }}}
 \end{document}
