@@ -23,10 +23,11 @@ January 2015 - June 2021
   Confidant (https://lyft.github.io/confidant/) for secrets storage and
   distribution, giving us much more control over which people and machines had
   access to our secrets.
-- Implemented an authentication service which allowed users to sign arbitrary
-  data as their own identity in a way that machines could independently verify.
-  This allowed us to remove almost all use of GPG at Stripe, which eliminated a
-  large class of tooling issues related to deployments.
+- Implemented an authentication service in go which allowed users to sign
+  arbitrary data as their own identity in a way that machines could
+  independently verify. This allowed us to remove almost all use of GPG at
+  Stripe, which eliminated a large class of tooling issues related to
+  deployments.
 - Contributed to importing all of our low level infrastructure which had
   originally been set up via custom tooling (or by hand) into Terraform,
   allowing us to (mostly) automate creation of new AWS accounts.
