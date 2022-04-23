@@ -39,31 +39,32 @@
             \item Converted all of our internal infrastructure to use an
                 installation of Confidant
                 (\url{https://lyft.github.io/confidant/}) for secrets storage
-                and distribution, giving us much more control over which people
-                and machines had access to our secrets.
-            \item Implemented an authentication service which allowed users to
-                sign arbitrary data as their own identity in a way that
-                machines could independently verify. This allowed us to remove
-                almost all use of GPG at Stripe, which eliminated a large class
-                of tooling issues related to deployments.
+                and distribution, giving us much more control over which
+                people and machines had access to our secrets.
+            \item Implemented an authentication service in go which allowed
+                users to sign arbitrary data as their own identity in a way
+                that machines could independently verify. This allowed us to
+                remove almost all use of GPG at Stripe, which eliminated a
+                large class of tooling issues related to deployments.
             \item Contributed to importing all of our low level infrastructure
                 which had originally been set up via custom tooling (or by
-                hand) into Terraform, allowing us to (mostly) automate creation
-                of new AWS accounts.
+                hand) into Terraform, allowing us to (mostly) automate
+                creation of new AWS accounts.
             \item Contributed to our rollout of Envoy for service-to-service
                 communication, giving us automatic, transparent mutual TLS for
                 almost all internal traffic. Additionally, used features
                 provided by Envoy to implement a blue/green deploy mechanism
-                which greatly improved speed and reliability of deploys for our
-                critical services.
-            \item Implemented a fleetwide service in go for running maintenance
-                commands on servers (running puppet, restarting services, etc),
-                which reduced the time needed for running these types of
-                commands from several days in some cases to under 5 minutes.
-                Additionally, designed a secure protocol for these types of
-                actions which ensured that the end services would not perform
-                any actions without first ensuring that the request was logged
-                in a separate secure append-only logging system.
+                which greatly improved speed and reliability of deploys for
+                our critical services.
+            \item Implemented a fleetwide service in go for running
+                maintenance commands on servers (running puppet, restarting
+                services, etc), which reduced the time needed for running
+                these types of commands from several days in some cases to
+                under 5 minutes. Additionally, designed a secure protocol for
+                these types of actions which ensured that the end services
+                would not perform any actions without first ensuring that the
+                request was logged in a separate secure append-only logging
+                system.
         \end{itemize}
     % }}}
     % Infinity Interactive {{{
